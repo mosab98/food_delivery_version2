@@ -98,7 +98,7 @@ class _CartPageState extends State<CartPage> {
                                                         chartProducts[index]
                                                             ['count']);
 
-                                            debugPrint("rrrr" +
+                                            debugPrint(
                                                 productInOrder.toString());
                                             debugPrint(
                                                 countProductInOrder.toString());
