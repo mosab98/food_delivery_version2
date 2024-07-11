@@ -17,13 +17,14 @@ class CartPage extends StatefulWidget {
 class _CartPageState extends State<CartPage> {
   String a = (chartProducts.length).toString();
   List<Map<String, dynamic>> dummyOrders = [];
-  List productInOrder = [];
-  List countProductInOrder = [];
-  List priceProductInOrder = [];
 
   @override
   Widget build(BuildContext context) {
+    List productInOrder = [];
+    List countProductInOrder = [];
+    List priceProductInOrder = [];
     final orientation = MediaQuery.of(context).orientation;
+
     return Scaffold(
       drawer: const AppDrawer(),
       appBar: const PreferredSize(
@@ -96,8 +97,14 @@ class _CartPageState extends State<CartPage> {
                                                     element["count"] ==
                                                         chartProducts[index]
                                                             ['count']);
-                                            productInOrder
-                                                .remove(productCart.name);
+
+                                            debugPrint("rrrr" +
+                                                productInOrder.toString());
+                                            debugPrint(
+                                                countProductInOrder.toString());
+                                            debugPrint(
+                                                priceProductInOrder.toString());
+
                                             countInChart--;
                                           });
                                         },
@@ -118,8 +125,6 @@ class _CartPageState extends State<CartPage> {
                                                     element["count"] ==
                                                         chartProducts[index]
                                                             ['count']);
-                                            productInOrder
-                                                .remove(productCart.name);
                                           });
                                         },
                                         icon: const Icon(Icons.delete),
