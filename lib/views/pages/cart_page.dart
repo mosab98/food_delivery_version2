@@ -156,15 +156,15 @@ class _CartPageState extends State<CartPage> {
                                 height: 40,
                                 child: ElevatedButton(
                                   onPressed: () {
-                                    orders.add({
-                                      "order": {
-                                        'orderProduct': productInOrder,
-                                        'countProduct': countProductInOrder,
-                                        'totlePriceProduct': priceProductInOrder
-                                      }
-                                    });
-
                                     setState(() {
+                                      orders.add({
+                                        "order": {
+                                          'orderProduct': productInOrder,
+                                          'countProduct': countProductInOrder,
+                                          'totlePriceProduct':
+                                              priceProductInOrder
+                                        }
+                                      });
                                       chartProducts.clear();
                                       total = 0;
                                       countInChart = 0;

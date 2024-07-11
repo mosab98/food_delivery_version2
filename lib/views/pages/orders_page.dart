@@ -23,12 +23,13 @@ class OrdersPage extends StatelessWidget {
                   itemBuilder: (context, index) {
                     final detalsProduct = orders[index]['order'];
 
-                    //debugPrint(detalsProduct.toString() );
+                    debugPrint(detalsProduct.toString());
                     return InkWell(
                       onTap: () {
                         Navigator.of(context).pushNamed(
                             OrderDetailsPage.routeName,
                             arguments: detalsProduct);
+                        debugPrint(orders.toString());
                       },
                       child: const Card(
                         child: Column(

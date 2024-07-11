@@ -34,12 +34,11 @@ class _CheckoutState extends State<Checkout> {
               height: 40,
               child: ElevatedButton(
                 onPressed: () {
-                  chartProducts.add({'product': product, 'count': counter});
-
-                  total = total + (product.price * counter) as double;
-                  counter = 1;
-
                   setState(() {
+                    chartProducts.add({'product': product, 'count': counter});
+
+                    total = total + (product.price * counter) as double;
+                    counter = 1;
                     countInChart1++;
                     countInChart = countInChart1;
                   });
